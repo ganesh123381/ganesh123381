@@ -40,10 +40,10 @@ REST_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GRAPHQL_TOKEN = os.environ.get("STATS_TOKEN") or REST_TOKEN
 
 GOALS = {
-    "repos": 50,
-    "followers": 200,
-    "stars": 100,
-    "contributions": 1000,
+    "repos": 12,
+    "followers": 0,
+    "stars": 0,
+    "contributions": 59,
 }
 
 REST_HEADERS = {"Accept": "application/vnd.github+json"}
@@ -155,58 +155,77 @@ def ring(cx, cy, r, pct, color, stroke_width=8):
 
 
 def build_svg(stats, username):
-    card_w, card_h = 760, 260
+    card_w, card_h = 760, 230
+
     metrics = [
-        ("Repositories", stats["repos"], GOALS["repos"]),
-        ("Followers", stats["followers"], GOALS["followers"]),
-        ("Total Stars", stats["stars"], GOALS["stars"]),
-        ("Contributions (yr)", stats["contributions"], GOALS["contributions"]),
+        ("Followers", stats["followers"]),
+        ("Stars", stats["stars"]),
+        ("Repositories", stats["repos"]),
+        ("Contributions", stats["contributions"]),
     ]
 
-    n = len(metrics)
-    gap = card_w / n
-    r = 42
-    cy = 150
+    gap = card_w / 4
+    radius = 36
+    cy = 105
 
-    circles_svg = ""
-    for i, (label, value, goal) in enumerate(metrics):
-        pct = min(100, round((value / goal) * 100)) if goal else 0
-        color = score_color(pct)
+    svg = f'''
+<svg width="{card_w}" height="{card_h}" viewBox="0 0 {card_w} {card_h}"
+xmlns="http://www.w3.org/2000/svg">
+
+<style>
+    .title {{
+        fill:#e6edf3;
+        font:700 20px Segoe UI,Arial,sans-serif;
+    }}
+
+    .sub {{
+        fill:#8b949e;
+        font:14px Segoe UI,Arial,sans-serif;
+    }}
+
+    .score {{
+        fill:#0CCE6B;
+        font:700 28px Segoe UI,Arial,sans-serif;
+    }}
+
+    .label {{
+        fill:#c9d1d9;
+        font:15px Segoe UI,Arial,sans-serif;
+    }}
+</style>
+
+<rect width="{card_w}" height="{card_h}" rx="16" fill="#0d1117"/>
+
+<text x="28" y="38" class="title">GitHub Profile Insights</text>
+<text x="28" y="62" class="sub">https://github.com/{username}</text>
+'''
+
+    for i, (label, value) in enumerate(metrics):
         cx = gap * i + gap / 2
-        circles_svg += ring(cx, cy, r, pct, color)
-        circles_svg += f'''
-        <text x="{cx}" y="{cy+8}" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="26" font-weight="700" fill="{color}">{value}</text>
-        <text x="{cx}" y="{cy+r+34}" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="14" fill="#c9d1d9">{label}</text>
+
+        svg += f'''
+        <!-- background ring -->
+        <circle cx="{cx}" cy="{cy}" r="{radius}"
+                fill="none"
+                stroke="#2a2f3a"
+                stroke-width="8"/>
+
+        <!-- green ring -->
+        <circle cx="{cx}" cy="{cy}" r="{radius}"
+                fill="none"
+                stroke="#0CCE6B"
+                stroke-width="8"/>
+
+        <text x="{cx}" y="{cy+9}"
+              text-anchor="middle"
+              class="score">{value}</text>
+
+        <text x="{cx}" y="{cy+65}"
+              text-anchor="middle"
+              class="label">{label}</text>
         '''
 
-    svg = f'''<svg width="{card_w}" height="{card_h}" viewBox="0 0 {card_w} {card_h}"
-  xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <clipPath id="rounded">
-      <rect x="0" y="0" width="{card_w}" height="{card_h}" rx="18" ry="18"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#rounded)">
-    <rect width="{card_w}" height="{card_h}" fill="#0d1117"/>
-    <rect x="0" y="0" width="{card_w}" height="4" fill="url(#accent)"/>
-    <defs>
-      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00f7ff"/>
-        <stop offset="100%" stop-color="#7b2ff7"/>
-      </linearGradient>
-    </defs>
-    <text x="30" y="42" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
-      🚀 GitHub Profile Insights
-    </text>
-    <text x="30" y="66" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">
-      github.com/{username} · auto-updated
-    </text>
-    {circles_svg}
-  </g>
-  <rect x="0.5" y="0.5" width="{card_w-1}" height="{card_h-1}" rx="18" ry="18" fill="none" stroke="#30363d"/>
-</svg>'''
+    svg += "</svg>"
     return svg
 
 
