@@ -1,0 +1,66 @@
+<svg width="760" height="260" viewBox="0 0 760 260"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="760" height="260" rx="18" ry="18"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <rect width="760" height="260" fill="#0d1117"/>
+    <rect x="0" y="0" width="760" height="4" fill="url(#accent)"/>
+    <defs>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00f7ff"/>
+        <stop offset="100%" stop-color="#7b2ff7"/>
+      </linearGradient>
+    </defs>
+    <text x="30" y="42" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
+      🚀 GitHub Profile Insights
+    </text>
+    <text x="30" y="66" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">
+      github.com/ganesh123381 · auto-updated
+    </text>
+    
+    <circle cx="95.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
+    <circle cx="95.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
+      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="211.12"
+      transform="rotate(-90 95.0 150)"/>
+    
+        <text x="95.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="26" font-weight="700" fill="#ff4e42">10</text>
+        <text x="95.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="14" fill="#c9d1d9">Repositories</text>
+        
+    <circle cx="285.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
+    <circle cx="285.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
+      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="263.89"
+      transform="rotate(-90 285.0 150)"/>
+    
+        <text x="285.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="26" font-weight="700" fill="#ff4e42">0</text>
+        <text x="285.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="14" fill="#c9d1d9">Followers</text>
+        
+    <circle cx="475.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
+    <circle cx="475.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
+      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="263.89"
+      transform="rotate(-90 475.0 150)"/>
+    
+        <text x="475.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="26" font-weight="700" fill="#ff4e42">0</text>
+        <text x="475.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="14" fill="#c9d1d9">Total Stars</text>
+        
+    <circle cx="665.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
+    <circle cx="665.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
+      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="250.70"
+      transform="rotate(-90 665.0 150)"/>
+    
+        <text x="665.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="26" font-weight="700" fill="#ff4e42">46</text>
+        <text x="665.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="14" fill="#c9d1d9">Contributions (yr)</text>
+        
+  </g>
+  <rect x="0.5" y="0.5" width="759" height="259" rx="18" ry="18" fill="none" stroke="#30363d"/>
+</svg>
