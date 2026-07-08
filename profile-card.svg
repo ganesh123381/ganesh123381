@@ -1,66 +1,111 @@
-<svg width="760" height="260" viewBox="0 0 760 260"
-  xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <clipPath id="rounded">
-      <rect x="0" y="0" width="760" height="260" rx="18" ry="18"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#rounded)">
-    <rect width="760" height="260" fill="#0d1117"/>
-    <rect x="0" y="0" width="760" height="4" fill="url(#accent)"/>
-    <defs>
-      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00f7ff"/>
-        <stop offset="100%" stop-color="#7b2ff7"/>
-      </linearGradient>
-    </defs>
-    <text x="30" y="42" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
-      🚀 GitHub Profile Insights
-    </text>
-    <text x="30" y="66" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">
-      github.com/ganesh123381 · auto-updated
-    </text>
-    
-    <circle cx="95.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
-    <circle cx="95.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
-      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="211.12"
-      transform="rotate(-90 95.0 150)"/>
-    
-        <text x="95.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="26" font-weight="700" fill="#ff4e42">10</text>
-        <text x="95.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="14" fill="#c9d1d9">Repositories</text>
+
+<svg width="760" height="230" viewBox="0 0 760 230"
+xmlns="http://www.w3.org/2000/svg">
+
+<style>
+    .title {
+        fill:#e6edf3;
+        font:700 20px Segoe UI,Arial,sans-serif;
+    }
+
+    .sub {
+        fill:#8b949e;
+        font:14px Segoe UI,Arial,sans-serif;
+    }
+
+    .score {
+        fill:#0CCE6B;
+        font:700 28px Segoe UI,Arial,sans-serif;
+    }
+
+    .label {
+        fill:#c9d1d9;
+        font:15px Segoe UI,Arial,sans-serif;
+    }
+</style>
+
+<rect width="760" height="230" rx="16" fill="#0d1117"/>
+
+<text x="28" y="38" class="title">GitHub Profile Insights</text>
+<text x="28" y="62" class="sub">https://github.com/ganesh123381</text>
+
+        <!-- background ring -->
+        <circle cx="95.0" cy="105" r="36"
+                fill="none"
+                stroke="#2a2f3a"
+                stroke-width="8"/>
+
+        <!-- green ring -->
+        <circle cx="95.0" cy="105" r="36"
+                fill="none"
+                stroke="#0CCE6B"
+                stroke-width="8"/>
+
+        <text x="95.0" y="114"
+              text-anchor="middle"
+              class="score">0</text>
+
+        <text x="95.0" y="170"
+              text-anchor="middle"
+              class="label">Followers</text>
         
-    <circle cx="285.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
-    <circle cx="285.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
-      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="263.89"
-      transform="rotate(-90 285.0 150)"/>
-    
-        <text x="285.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="26" font-weight="700" fill="#ff4e42">0</text>
-        <text x="285.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="14" fill="#c9d1d9">Followers</text>
+        <!-- background ring -->
+        <circle cx="285.0" cy="105" r="36"
+                fill="none"
+                stroke="#2a2f3a"
+                stroke-width="8"/>
+
+        <!-- green ring -->
+        <circle cx="285.0" cy="105" r="36"
+                fill="none"
+                stroke="#0CCE6B"
+                stroke-width="8"/>
+
+        <text x="285.0" y="114"
+              text-anchor="middle"
+              class="score">0</text>
+
+        <text x="285.0" y="170"
+              text-anchor="middle"
+              class="label">Stars</text>
         
-    <circle cx="475.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
-    <circle cx="475.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
-      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="263.89"
-      transform="rotate(-90 475.0 150)"/>
-    
-        <text x="475.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="26" font-weight="700" fill="#ff4e42">0</text>
-        <text x="475.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="14" fill="#c9d1d9">Total Stars</text>
+        <!-- background ring -->
+        <circle cx="475.0" cy="105" r="36"
+                fill="none"
+                stroke="#2a2f3a"
+                stroke-width="8"/>
+
+        <!-- green ring -->
+        <circle cx="475.0" cy="105" r="36"
+                fill="none"
+                stroke="#0CCE6B"
+                stroke-width="8"/>
+
+        <text x="475.0" y="114"
+              text-anchor="middle"
+              class="score">10</text>
+
+        <text x="475.0" y="170"
+              text-anchor="middle"
+              class="label">Repositories</text>
         
-    <circle cx="665.0" cy="150" r="42" fill="none" stroke="#2a2f3a" stroke-width="8"/>
-    <circle cx="665.0" cy="150" r="42" fill="none" stroke="#ff4e42" stroke-width="8"
-      stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="250.70"
-      transform="rotate(-90 665.0 150)"/>
-    
-        <text x="665.0" y="158" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="26" font-weight="700" fill="#ff4e42">46</text>
-        <text x="665.0" y="226" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
-          font-size="14" fill="#c9d1d9">Contributions (yr)</text>
-        
-  </g>
-  <rect x="0.5" y="0.5" width="759" height="259" rx="18" ry="18" fill="none" stroke="#30363d"/>
-</svg>
+        <!-- background ring -->
+        <circle cx="665.0" cy="105" r="36"
+                fill="none"
+                stroke="#2a2f3a"
+                stroke-width="8"/>
+
+        <!-- green ring -->
+        <circle cx="665.0" cy="105" r="36"
+                fill="none"
+                stroke="#0CCE6B"
+                stroke-width="8"/>
+
+        <text x="665.0" y="114"
+              text-anchor="middle"
+              class="score">46</text>
+
+        <text x="665.0" y="170"
+              text-anchor="middle"
+              class="label">Contributions</text>
+        </svg>
